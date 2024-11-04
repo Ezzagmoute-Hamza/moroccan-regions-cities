@@ -1,5 +1,6 @@
 import { Languages, RegionLanguageKeyMap } from './constants';
 import data from './data/regions.json';
+import { validateLanguage } from './validation';
 
 /**
  * Gets all moroccan regions.
@@ -9,7 +10,9 @@ import data from './data/regions.json';
 
 export function getAllRegions(language:string = Languages.English): {regionId:string,regionName:string}[]{
 
-   const regionLanguageKey = RegionLanguageKeyMap[language.trim().toLowerCase() as Languages] || RegionLanguageKeyMap.default;
+   language = validateLanguage(language);
+
+   const regionLanguageKey = RegionLanguageKeyMap[language as Languages] || RegionLanguageKeyMap.default;
 
    const moroccanRegions = data.regions.map(region => (
       {regionId:region.region_id,regionName:region[regionLanguageKey]}

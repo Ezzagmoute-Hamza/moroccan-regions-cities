@@ -13,8 +13,6 @@ import {
     countUnassignedCities
 } from './cities';
 
-
-
 export {
     getAllRegions,
     countMoroccanRegions,

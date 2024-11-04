@@ -1,5 +1,6 @@
 import data from './data/regions.json';
 import { CityLanguageKeyMap, Languages, regionsIds } from './constants';
+import { validateRegionId,validateLanguage } from './validation';
 
 /**
  * Gets cities within a specified region.
@@ -10,9 +11,13 @@ import { CityLanguageKeyMap, Languages, regionsIds } from './constants';
 
 export function getRegionCities(regionId:string = regionsIds[0],language:string = Languages.English):string[] {
  
-  if (!regionsIds.includes(regionId)) return [];
+  if (!validateRegionId(regionId)){
+    regionId =  regionsIds[0];
+  }
 
-  const cityKey = CityLanguageKeyMap[language.trim().toLowerCase() as Languages] || CityLanguageKeyMap.default;
+  language = validateLanguage(language);
+
+  const cityKey = CityLanguageKeyMap[language as Languages] || CityLanguageKeyMap.default;
 
   const region = data.regions.find(region => region.region_id === regionId);
   if (!region) return [];
@@ -31,7 +36,9 @@ export function getRegionCities(regionId:string = regionsIds[0],language:string 
 
 export function getUnassignedCities(language:string = Languages.English):string[] {
 
-  const cityLanguageKey = CityLanguageKeyMap[language.trim().toLowerCase() as Languages] || CityLanguageKeyMap.default;
+  language = validateLanguage(language);
+
+  const cityLanguageKey = CityLanguageKeyMap[language as Languages] || CityLanguageKeyMap.default;
 
   const moroccanUnassignedCities = data.unassigned_cities.map(city => city[cityLanguageKey]);
 
@@ -45,8 +52,10 @@ export function getUnassignedCities(language:string = Languages.English):string[
  */
 
 export function getAssignedMorrocanCities(language:string = Languages.English): string[] {
-   
-   const cityLanguageKey = CityLanguageKeyMap[language.trim().toLowerCase() as Languages] || CityLanguageKeyMap.default ;
+
+   language = validateLanguage(language);
+
+   const cityLanguageKey = CityLanguageKeyMap[language as Languages] || CityLanguageKeyMap.default ;
   
    const assignedMoroccanCities = data.regions.flatMap(region =>
      region.cities.map(city => city[cityLanguageKey])
@@ -58,12 +67,12 @@ export function getAssignedMorrocanCities(language:string = Languages.English): 
 /**
  * Count region cities.
  * @param {string} regionId 
- * @returns {number} - Array of cities.
+ * @returns {number} - the number of region cities.
  */
 
 export function countRegionCities(regionId:string = regionsIds[0]): number {
   
-  if (!regionsIds.includes(regionId)) return 0;
+  if (!validateRegionId(regionId)) return 0;
 
   const region = data.regions.find(region => region.region_id === regionId);
 
@@ -78,16 +87,20 @@ export function countRegionCities(regionId:string = regionsIds[0]): number {
  */
 
 export function countUnassignedCities(): number {
+
   return data.unassigned_cities.length;
+  
 }
 
 /**
- * Count Unassigned cities.
- * @returns {number} number of Unassigned cities
+ * Count assigned cities.
+ * @returns {number} number of assigned cities
  */
 
 export function countAssignedCities(): number {
+
   return getAssignedMorrocanCities(Languages.English).length;
+
 }
 
 /**
