@@ -4,14 +4,14 @@
   "description": "A Node.js package to handle Moroccan regions and cities.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Ezzagmoute-Hamza/moroccan-regions-cities.git"
+    "url": "git+https://github.com/Ezzagmoute-Hamza/moroccan-regions-cities.git"
   },
-  "homepage":"https://github.com/Ezzagmoute-Hamza/moroccan-regions-cities",
+  "homepage": "https://github.com/Ezzagmoute-Hamza/moroccan-regions-cities",
   "main": "src/index.ts",
   "scripts": {
-  "build": "tsc",
-  "start": "node dist/index.js",
-  "dev": "nodemon src/index.ts"
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.ts"
   },
   "keywords": [
     "morocco",

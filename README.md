@@ -233,9 +233,8 @@ We welcome contributions to improve and expand this package! Here are some ideas
    <li>
      2. <strong>Clone the Forked Repository:</strong>
 
-      ```bash
       git https://github.com/Ezzagmoute-Hamza/moroccan-regions-cities.git
-      ```
+      
   </li>
   <li>
      3. <strong>Create a New Branch:</strong> Make a new branch for your feature or bug fix
@@ -253,10 +252,9 @@ We welcome contributions to improve and expand this package! Here are some ideas
   <li>
      6. <strong>Commit and Push:</strong>
 
-     ```bash
       git add .
       git commit -m "Add new feature: description"
       git push origin feature/add-new-feature-name
-     ```
+     
   </li>
 </ul>
