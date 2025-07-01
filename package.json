@@ -1,10 +1,14 @@
 {
   "name": "moroccan-regions-cities",
-  "version": "1.0.3",
-  "description": "A Node.js package to handle Moroccan regions and cities.",
+  "version": "1.0.4",
+  "type": "module",
+  "description": "A comprehensive Node.js package for handling Moroccan administrative divisions including regions, provinces, and cities with full TypeScript support.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Ezzagmoute-Hamza/moroccan-regions-cities.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ezzagmoute-Hamza/moroccan-regions-cities/issues"
   },
   "homepage": "https://github.com/Ezzagmoute-Hamza/moroccan-regions-cities",
   "main": "dist/index.js",
@@ -16,10 +20,22 @@
   },
   "keywords": [
     "morocco",
+    "moroccan",
     "regions",
-    "cities"
+    "cities",
+    "provinces",
+    "administrative-divisions",
+    "geography",
+    "location",
+    "typescript",
+    "node",
+    "npm-package"
   ],
-  "author": "Ezzagmoute Hamza <ezzagmoute.hamza@gmail.com> (https://github.com/Ezzagmoute-Hamza)",
+  "author": {
+    "name": "Ezzagmoute Hamza",
+    "email": "ezzagmoute.hamza@gmail.com",
+    "url": "https://github.com/Ezzagmoute-Hamza"
+  },
   "license": "MIT",
   "dependencies": {
     "nodemon": "^3.1.7"
@@ -28,5 +44,8 @@
     "@types/node": "^22.8.6",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
