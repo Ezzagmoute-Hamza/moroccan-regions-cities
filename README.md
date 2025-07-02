@@ -622,9 +622,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/CHANGELOG.md/moroccan-regions-cities/issues)
-- **Documentation**: [Full Documentation](https://github.com/CHANGELOG.md/moroccan-regions-cities#readme)
-<!-- - **Examples**: [Example Repository](https://github.com/CHANGELOG.md/moroccan-regions-cities-examples) -->
+- **Issues**: [GitHub Issues](https://github.com/Ezzagmoute-Hamza/moroccan-regions-cities/issues)
+- **Documentation**: [Full Documentation](https://github.com/Ezzagmoute-Hamza/moroccan-regions-cities#readme)
+<!-- - **Examples**: [Example Repository](https://github.com/Ezzagmoute-Hamza/moroccan-regions-cities-examples) -->
 
 ## 🙏 Acknowledgments
 
