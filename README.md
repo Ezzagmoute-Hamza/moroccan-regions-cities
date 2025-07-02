@@ -553,7 +553,7 @@ We welcome contributions to improve and expand this package! Here are some ways 
 
 1. **Fork the Repository**
    ```bash
-   git clone https://github.com/your-username/moroccan-regions-cities.git
+   https://github.com/Ezzagmoute-Hamza/moroccan-regions-cities.git
    ```
 
 2. **Create a Feature Branch**
@@ -622,9 +622,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/your-username/moroccan-regions-cities/issues)
-- **Documentation**: [Full Documentation](https://github.com/your-username/moroccan-regions-cities#readme)
-- **Examples**: [Example Repository](https://github.com/your-username/moroccan-regions-cities-examples)
+- **Issues**: [GitHub Issues](https://github.com/CHANGELOG.md/moroccan-regions-cities/issues)
+- **Documentation**: [Full Documentation](https://github.com/CHANGELOG.md/moroccan-regions-cities#readme)
+<!-- - **Examples**: [Example Repository](https://github.com/CHANGELOG.md/moroccan-regions-cities-examples) -->
 
 ## 🙏 Acknowledgments
 
