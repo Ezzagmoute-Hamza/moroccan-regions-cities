@@ -26,3 +26,10 @@ export const CityLanguageKeyMap: Record<Languages | "default", CityLanguageKey> 
     default: "city_english"
 };
 
+export const moroccoGlobals = {
+   regions : 12,
+   assignedCities:92,
+   unassignedCities:22,
+   allCities:92+22,
+   selectedRegionCitiesNumber:0
+}

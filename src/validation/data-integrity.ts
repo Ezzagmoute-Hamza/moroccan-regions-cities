@@ -5,6 +5,7 @@
 import { DataIntegrityResult } from '../types';
 import { createDataIntegrityError } from '../errors';
 import data from '../data/regions.json';
+import { moroccoGlobals } from '../constants';
 
 /**
  * Validates the integrity of the regions and cities data
@@ -152,8 +153,8 @@ export function isDatasetComplete(): boolean {
   const stats = getDataStatistics();
   
   // Basic completeness checks
-  if (stats.regionsCount < 10) return false; // Morocco should have reasonable number of regions
-  if (stats.totalCitiesCount < 50) return false; // Should have reasonable number of cities
+  if (stats.regionsCount < moroccoGlobals.regions) return false; // Morocco should have reasonable number of regions
+  if (stats.totalCitiesCount < moroccoGlobals.allCities) return false; // Should have reasonable number of cities
   if (stats.averageCitiesPerRegion < 1) return false; // Each region should have at least some cities on average
   
   return true;

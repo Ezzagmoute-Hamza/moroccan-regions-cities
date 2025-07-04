@@ -1,6 +1,6 @@
 
 import {cityExists, countAllMoroccanCities, countAssignedCities, countMoroccanRegions, countRegionCities, countUnassignedCities, getAllCities, getAllRegions, getAssignedMorrocanCities, getCityDetails, getRandomCities, getRandomRegions, getRegionByName, getRegionCities, getUnassignedCities, regionExists, searchCities, searchRegions} from '../src';
-import { Languages } from '../src/constants';
+import { Languages, moroccoGlobals } from '../src/constants';
 import data from '../src/data/regions.json';
 /**
  * Tested functions:
@@ -15,10 +15,7 @@ import data from '../src/data/regions.json';
  * - countUnassignedCities
  */
 const moroccoGlobalInformation = {
-   regions : 12,
-   assignedCities:92,
-   unassignedCities:22,
-   allCities:92+22,
+   ...moroccoGlobals,
    selectedRegionCitiesNumber:0
 }
 export const FirstMoroccanRegion = data.regions[0];
