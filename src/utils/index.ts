@@ -2,9 +2,9 @@
  * Utility functions for the Moroccan regions and cities package
  */
 
-import { validateLanguage, validateRegionIdStrict, isLanguageSupported } from '../validation';
+import { validateLanguage, validateRegionIdStrict } from '../validation';
 import { RegionLanguageKeyMap, CityLanguageKeyMap, Languages } from '../constants';
-import { Region, City, RegionWithCities, SupportedLanguage } from '../types';
+import { Region } from '../types';
 import { throwInvalidRegionIdError } from '../errors';
 import { getCacheValue, setCacheValue, createCacheKey } from '../cache';
 import data from '../data/regions.json';
@@ -207,7 +207,6 @@ export function getAllCities(language: string = Languages.English): string[] {
   const results = allCities
     .map(city => city[cityKey])
     .filter((city, index, self) => self.indexOf(city) === index) // Remove duplicates
-    .sort(); // Sort alphabetically
   
   setCacheValue(cacheKey, results);
   return results;

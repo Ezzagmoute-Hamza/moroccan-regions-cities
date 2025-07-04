@@ -15,7 +15,7 @@ export function validateDataIntegrity(): DataIntegrityResult {
   
   try {
     // Check if data exists
-    if (!data || !data.regions || !data.unassigned_cities) {
+    if(!data || !Array.isArray(data.regions) || !Array.isArray(data.unassigned_cities)) {
       errors.push('Missing required data structure');
       return { isValid: false, errors };
     }
