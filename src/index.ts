@@ -7,6 +7,7 @@
  * 
  * @version 2.0.0
  * @author Ezzagmoute Hamza <ezzagmoute.hamza@gmail.com>
+ * @contributor Abdelkabir Ouadoukou <abdelkabir.ouadoukou@gmail.com>
  * @license MIT
  * 
  * @example

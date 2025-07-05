@@ -55,6 +55,13 @@
     "email": "ezzagmoute.hamza@gmail.com",
     "url": "https://github.com/Ezzagmoute-Hamza"
   },
+  "contributors": [
+    {
+      "name": "Abdelkabir Ouadoukou",
+      "email": "abdelkabir.ouadoukou@gmail.com",
+      "url": "https://github.com/khabzox"
+    }
+  ],
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
