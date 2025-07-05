@@ -57,6 +57,15 @@ import {
     getSupportedLanguages
 } from './validation';
 
+// Import data-integrity functions
+import {
+    isDatasetComplete,
+    performDataHealthCheck,
+    getDataStatistics,
+    validateDataIntegrity,
+    validateDataIntegrityStrict
+} from './validation/data-integrity';
+
 // Import error functions
 import {
     createInvalidLanguageError,
@@ -189,6 +198,22 @@ export {
     /** Get list of all supported languages */
     getSupportedLanguages,
     
+    /**
+     * @group Data-Integrity
+     * @description Functions For checking the Data integrity
+    */
+
+    /** Checks if the dataset appears to be complete */
+    isDatasetComplete,
+    /** Performs a comprehensive data health check */
+    performDataHealthCheck,
+    /** Gets statistics about the dataset */
+    getDataStatistics,
+    /** Validates the integrity of the regions and cities data */
+    validateDataIntegrity,
+    /** Validates data integrity and throws error if invalid */
+    validateDataIntegrityStrict,
+
     // ===== ERROR HANDLING FUNCTIONS =====
     /**
      * @group Error Handling
@@ -349,6 +374,11 @@ export default {
     validateCityId,
     isLanguageSupported,
     getSupportedLanguages,
+    isDatasetComplete,
+    performDataHealthCheck,
+    getDataStatistics,
+    validateDataIntegrity,
+    validateDataIntegrityStrict,
     
     // ===== ERROR HANDLING FUNCTIONS =====
     createInvalidLanguageError,
